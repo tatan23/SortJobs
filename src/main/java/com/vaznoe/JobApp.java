@@ -49,9 +49,9 @@ public class JobApp {
             List<JobOutput> jobOutputs = new ArrayList<>();
             titles.entrySet().forEach(oneTitleEntry -> {
                 JobOutput jobOutput = new JobOutput();
-                jobOutput.department = oneTitleEntry.getValue().get(0).getDepartment();
-                jobOutput.jobTitle = oneTitleEntry.getKey();
-                jobOutput.averageHourlyRate = oneTitleEntry.getValue().stream().mapToDouble(JobDetails::getHourlyRate).average().getAsDouble();
+                jobOutput.setDepartment(oneTitleEntry.getValue().get(0).getDepartment());
+                jobOutput.setJobTitle(oneTitleEntry.getKey());
+                jobOutput.setAverageHourlyRate(oneTitleEntry.getValue().stream().mapToDouble(JobDetails::getHourlyRate).average().getAsDouble());
                 jobOutputs.add(jobOutput);
             });
             JobOutput theBestJob = jobOutputs.stream()
@@ -68,11 +68,11 @@ public class JobApp {
             String[] values = csvReader.readNext();
             while ((values = csvReader.readNext()) != null) {
                 JobDetails job = new JobDetails();
-                job.department = values[0];
-                job.lastName = values[1];
-                job.firstName = values[2];
-                job.jobTitle = values[3];
-                job.hourlyRate = Double.parseDouble(values[4]);
+                job.setDepartment(values[0]);
+                job.setLastName(values[1]);
+                job.setFirstName(values[2]);
+                job.setJobTitle(values[3]);
+                job.setHourlyRate(Double.parseDouble(values[4]));
                 jobs.add(job);
             }
         }
