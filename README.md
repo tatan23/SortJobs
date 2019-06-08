@@ -3,7 +3,7 @@ Attached is a CSV formatted data for wages in the city of Seattle. Given this fi
 For example if we have : 
 
 | Department | Last Name | First Name |	Job Title |	Hourly Rate |
-| ----------- |:-------------:|:---------:|:-----------:|:-----------|
+| :----------- |:-------------:|:---------:|:-----------:|:-----------:|
 | QA | Stargel | Eric | QA Engineer | 35 |
 | QA | Miller | Eric | QA Engineer | 40 |
  
