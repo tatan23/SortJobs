@@ -17,4 +17,3 @@ The result output should be :
       "Average Hourly Rate": "37.5"
      }
 }
-```Add more information
